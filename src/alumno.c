@@ -30,14 +30,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef MAIN_H  /*! @cond    */
-#define MAIN_H /*! @endcond */
-
-/** @file main.h
+/** @file alumno.c
  **
- ** @brief Declaraciones del programa principal tpn2
+ ** @brief Codigo del modulo de funciones de alumno
  **
- ** Plantilla para los archivos de cabeceras de las prácticos de las 
+ ** Plantilla para los archivos de codigo fuente de prácticos de las 
  ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
  ** de Tiempo Real dictadas en de la Especialización en Integración de
  ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
@@ -51,26 +48,29 @@
  ** @{ 
  */
 
-/* === Inclusiones de archivos externos ==================================== */
+/* === Inclusiones de cabeceras ============================================ */
+#include "alumno.h"
+#include <stdio.h>
+/* === Definicion y Macros privados ======================================== */
 
-/* === Cabecera C++ ======================================================== */
-#ifdef __cplusplus
-extern "C" {
-#endif
+/* === Declaraciones de tipos de datos privados ============================ */
 
-/* === Definicion y Macros publicos ======================================== */
+/* === Definiciones de variables privadas ================================== */
 
-/* == Declaraciones de tipos de datos publicos ============================= */
+/* === Definiciones de variables publicas ================================== */
 
-/* === Declaraciones de variables publicas ================================= */
+/* === Declaraciones de funciones privadas ================================= */
 
-/* === Declaraciones de funciones publicas ================================= */
-int main(void);
-/* === Ciere de documentacion ============================================== */
-#ifdef __cplusplus
+/* === Definiciones de funciones privadas ================================== */
+
+/* === Definiciones de funciones publicas ================================== */
+void nombre (const struct alumno_s * alumno)
+{
+    printf("Apellido del alumno: %s", alumno->apellido);
+    printf("Nombre del alumno: %s", alumno->nombre);
+    printf("Documento del alumno: %s", alumno->documento);
 }
-#endif
+/* === Ciere de documentacion ============================================== */
 
 /** @} Final de la definición del modulo para doxygen */
 
-#endif   /* MAIN_H */

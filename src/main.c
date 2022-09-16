@@ -49,6 +49,7 @@
 
 /* === Inclusiones de cabeceras ============================================ */
 #include "main.h"
+#include "alumno.h"
 #include <stdio.h>
 
 /* === Definicion y Macros privados ======================================== */
@@ -66,8 +67,13 @@
 /* === Definiciones de funciones publicas ================================== */
 
 int main(void) {
-	printf("Empieza el programa principal\r\n");
-	printf("Termina el programa principal\r\n");
+	static const struct alumno_s alumno =
+	{
+		.apellido="LLANOS",
+		.nombre="VICTOR",
+		.documento="27000978"
+	};
+	nombre(&alumno );
 	return 0;
 }
 /* === Ciere de documentacion ============================================== */

@@ -30,12 +30,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef MAIN_H  /*! @cond    */
-#define MAIN_H /*! @endcond */
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
 
-/** @file main.h
+/** @file alumno.h
  **
- ** @brief Declaraciones del programa principal tpn2
+ ** @brief Cabecera del modulo de funciones de alumno 
  **
  ** Plantilla para los archivos de cabeceras de las prácticos de las 
  ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
@@ -61,11 +61,17 @@ extern "C" {
 /* === Definicion y Macros publicos ======================================== */
 
 /* == Declaraciones de tipos de datos publicos ============================= */
+struct alumno_s
+{
+    char apellido [64];
+    char nombre [64];
+    char documento [16];
+};
 
 /* === Declaraciones de variables publicas ================================= */
 
 /* === Declaraciones de funciones publicas ================================= */
-int main(void);
+void nombre (const struct alumno_s * alumno);
 /* === Ciere de documentacion ============================================== */
 #ifdef __cplusplus
 }
@@ -73,4 +79,4 @@ int main(void);
 
 /** @} Final de la definición del modulo para doxygen */
 
-#endif   /* MAIN_H */
+#endif   /* ALUMNO_H */
