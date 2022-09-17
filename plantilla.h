@@ -1,6 +1,9 @@
 /* Copyright 2022, Laboratorio de Microprocesadores 
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
+ * http://www.microprocesadores.unt.edu.ar/
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -29,11 +32,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+#ifndef PLANTILLA_H   /*! @cond    */
+#define PLANTILLA_H   /*! @endcond */
+
+/** @file plantilla.h
  **
- ** @brief Programa principal del tpn2
+ ** @brief Plantilla de archivos de cabecera 
  **
- ** Plantilla para los archivos de codigo fuente de prácticos de las 
+ ** Plantilla para los archivos de cabeceras de las prácticos de las 
  ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
  ** de Tiempo Real dictadas en de la Especialización en Integración de
  ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
@@ -47,36 +53,26 @@
  ** @{ 
  */
 
-/* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include "alumno.h"
-#include <stdio.h>
+/* === Inclusiones de archivos externos ==================================== */
 
-/* === Definicion y Macros privados ======================================== */
+/* === Cabecera C++ ======================================================== */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/* === Declaraciones de tipos de datos privados ============================ */
+/* === Definicion y Macros publicos ======================================== */
 
-/* === Definiciones de variables privadas ================================== */
+/* == Declaraciones de tipos de datos publicos ============================= */
 
-/* === Definiciones de variables publicas ================================== */
+/* === Declaraciones de variables publicas ================================= */
 
-/* === Declaraciones de funciones privadas ================================= */
+/* === Declaraciones de funciones publicas ================================= */
 
-/* === Definiciones de funciones privadas ================================== */
-
-/* === Definiciones de funciones publicas ================================== */
-//! Estructura que contiene los datos del alumno
-int main(void) {
-	static const struct alumno_s alumno =
-	{
-		.apellido="LLANOS",//! Cadena de carateres que contiene el apellido del alumno
-		.nombre="VICTOR", //! Cadena de carateres que contiene el nombre del alumno
-		.documento="27000978" //! Cadena de carateres que contiene el documento del alumno
-	};
-	nombre(&alumno );
-	return 0;
-}
 /* === Ciere de documentacion ============================================== */
+#ifdef __cplusplus
+}
+#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
+#endif   /* PLANTILLA_H */
